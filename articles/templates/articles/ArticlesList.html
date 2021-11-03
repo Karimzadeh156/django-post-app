@@ -1,0 +1,29 @@
+<!DOCTYPE html>  
+<html lang="fa" dir="rtl">
+<head>  
+<meta charset="UTF-8">  
+<title>articles list</title>  
+</head>
+<body style="background-color: lavender">
+<nav><ul>
+<br>
+<a href = " {% url 'home page' %} "> صفحه اصلی </a>
+<br>
+<a href = " {% url 'about page' %} "> درباره ما </a>
+</ul></nav>
+<hr>
+<main><header>
+<h1><a href="/">جدیدترین مقالات</a></h1>  
+</header>
+<br>
+{% for a in articles %}
+<h2><a href = " {% url 'article continu' a.id%} "> عنوان: {{a.title}}</a></h2>
+<p>ارسال شده در تاریخ: {{a.create_date}}</p>
+<p>نویسنده: {{a.author}}</p>
+<p>{{a.continu}}</p>
+<a href = " {% url 'article continu' a.id%} " >ادامه این مقاله را از اینجا بخوانید. </a>
+<br><br>
+{% endfor %}
+</main>
+</body>  
+</html>  
