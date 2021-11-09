@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>  
 <html lang="fa" dir="rtl">
 <head>  
@@ -18,7 +19,7 @@
 <br>
 {% for a in articles %}
 <h2><a href = " {% url 'article continu' a.id%} "> عنوان: {{a.title}}</a></h2>
-<p>ارسال شده در تاریخ: {{a.create_date}}</p>
+<p>ارسال شده در تاریخ: {{a.shamsidate}}</p>
 <p>نویسنده: {{a.author}}</p>
 <p>{{a.continu}}</p>
 <a href = " {% url 'article continu' a.id%} " >ادامه این مقاله را از اینجا بخوانید. </a>
