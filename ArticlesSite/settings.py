@@ -42,8 +42,8 @@ INSTALLED_APPS = [
 ]
 JALALI_DATE_DEFAULTS = {
     'Strftime': {
-        'date': '%d/%m/%y',
-        'datetime': '%H:%M: _ %d/%m/%y',
+        'date': '%y/%m/%d',
+        'datetime': '%H:%M:%S _ %y/%m/%d',
     },
     'Static': {
         'js': [

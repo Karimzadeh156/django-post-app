@@ -9,7 +9,7 @@ def about(request):
     return render(request, 'articles/about.html')
 
 def ArticlesList(request):
-    articles = models.article.objects.all().order_by('create_date')
+    articles = models.article.objects.all().order_by('-create_date')
     return render(request, 'articles/ArticlesList.html', {'articles':articles})
 
 def ArticleContinu(request, arc_id):
